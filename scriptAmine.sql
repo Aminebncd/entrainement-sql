@@ -268,7 +268,9 @@ RESULTAT :
 SELECT personnage.nom_personnage
 FROM personnage
 INNER JOIN autoriser_boire ON personnage.id_personnage=autoriser_boire.id_personnage
-WHERE nom_personnage NOT IN (autoriser_boire.id_potion)
+
+WHERE autoriser_boire.id_potion <> 1
+
 
 
 
